@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project 1</title>
+    <style>
+        body{
+            background-color:rgb(154, 71, 232);
+            text-align:center;
+            padding:100px;
+        }
+        .btn{
+            background-color:rgb(175, 59, 59);
+            font-family:cursive;
+            font-size:large;
+            height:50px;
+            width:100px;
+            justify-content:space-around;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            background-color:rgb(138, 208, 68)
+        }
+    </style>
+</head>
+<body>
+    <h1 id="txt">Can you turn on lights??⚇⚇⚇⚇⚇⚇</h1>
+    <br>
+    <div class="container">
+    <img src="bulboff.png" alt="" id="bulb" height="400px">
+    </div>
+    <br>
+    <button class="btn"id="on" onclick="funcon()">Turn on</button>
+    <button class="btn" id="off" onclick="funcoff()">Turn off</button>
+    <script>
+        function funcon(){
+            const i=document.getElementById("bulb");
+
+            i.src='bulbon.png';
+            i.style.height="390px";
+            i.style.width="290px";
+            const t=document.getElementById("txt");
+            t.innerHTML="Lights are on!💡";
+        }
+        function funcoff(){
+            const h=document.getElementById("bulb");
+            h.src='bulboff.png';
+            h.style.height="400px";
+            h.style.width="400px";
+            const t=document.getElementById("txt");
+            t.innerHTML="Light out!👻";
+        }
+    </script>
+</body>
+</html>
